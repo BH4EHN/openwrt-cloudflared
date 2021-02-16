@@ -47,7 +47,7 @@ define Build/Compile
 endef
 
 define Package/$(PKG_NAME)/install
-	$(CP) ./files/* $(1)/
+	$(CP) ./etc/* $(1)/etc/
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(GO_PKG_BUILD_BIN_DIR)/cloudflared $(1)/usr/bin/cloudflared
 endef
