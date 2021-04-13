@@ -42,12 +42,13 @@ endef
 
 define Build/Compile
 	$(call GoPackage/Build/Compile)
-	# uncomment this line if upx presents
-	# $(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/cloudflared
+	# comment this line if upx not present
+	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/cloudflared
+	chmod +x ./files/etc/init.d/cloudflared
 endef
 
 define Package/$(PKG_NAME)/install
-	$(CP) ./etc/* $(1)/etc/
+	$(CP) ./files/* $(1)/
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(GO_PKG_BUILD_BIN_DIR)/cloudflared $(1)/usr/bin/cloudflared
 endef
