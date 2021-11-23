@@ -5,9 +5,9 @@ PKG_VERSION:=2021.11.0
 PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/cloudflare/cloudflared
+PKG_SOURCE_URL:=https://codeload.github.com/cloudflare/cloudflared/tar.gz/${PKG_VERSION}?
 PKG_SOURCE_VERSION:=2021.11.0
+PKG_MD5SUM=75de9cb167110cc755dd0a0423552179
 
 PKG_LICENSE:=CloudFlare
 PKG_LICENSE_FILES:=LICENSE
