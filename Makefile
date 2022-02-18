@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=cloudflared
-PKG_VERSION:=2022.1.2
+PKG_VERSION:=2022.2.1
 PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_SOURCE_URL:=https://codeload.github.com/cloudflare/cloudflared/tar.gz/${PKG_VERSION}?
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_MD5SUM=815cbc874634af900672aa6ab2ce1700
+PKG_MD5SUM=060e3d41311c29c540d57765995a7a55
 
 PKG_LICENSE:=CloudFlare
 PKG_LICENSE_FILES:=LICENSE
@@ -19,7 +19,7 @@ PKG_USE_MIPS16:=0
 
 GO_PKG:=github.com/cloudflare/cloudflared/cmd/cloudflared
 GO_PKG_LDFLAGS:=-s -w
-# PKG_CONFIG_DEPENDS:= 
+# PKG_CONFIG_DEPENDS:=
 
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
