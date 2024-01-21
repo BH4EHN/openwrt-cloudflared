@@ -2,6 +2,10 @@
 
 OpenWRT package of [Cloudflare Argo Tunnel client](https://developers.cloudflare.com/argo-tunnel/) ([Github](https://github.com/cloudflare/cloudflared))
 
+**UPD** the OpenWrt feed now has the `cloudflared` package and Luci Application `luci-app-cloudflared` that provides a GUI for configuration.
+You can install them with the command `opkg install cloudflared luci-app-cloudflared`
+
+
 ## Prebuilt release
 
 Prebuilt ipk can found in [releases](https://github.com/BH4EHN/openwrt-cloudflared/releases)
